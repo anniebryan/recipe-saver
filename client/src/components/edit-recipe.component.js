@@ -92,8 +92,8 @@ export default class EditRecipe extends Component {
                         <label>Title:</label>
                         <input  type="text"
                                 className="form-control"
-                                value={this.state.recipe_title}
-                                onChange={this.onChangeRecipeTitle}
+                                value="{this.state.recipe_title}"
+                                onChange="{this.onChangeRecipeTitle}"
                                 />
                     </div>
                     <div className="form-group">
