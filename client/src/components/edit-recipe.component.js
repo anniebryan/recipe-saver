@@ -92,15 +92,15 @@ export default class EditRecipe extends Component {
                         <label>Title:</label>
                         <input  type="text"
                                 className="form-control"
-                                value="{this.state.recipe_title}"
-                                onChange="{this.onChangeRecipeTitle}"
+                                defaultValue={this.state.recipe_title}
+                                onChange={this.onChangeRecipeTitle}
                                 />
                     </div>
                     <div className="form-group">
                         <label>Ingredients: </label>
                         <input  type="text"
                                 className="form-control"
-                                value={this.state.recipe_ingredients}
+                                defaultValue={this.state.recipe_ingredients}
                                 onChange={this.onChangeRecipeIngredients}
                                 />
                     </div>
@@ -108,7 +108,7 @@ export default class EditRecipe extends Component {
                         <label>Prep Time: </label>
                         <input  type="number"
                                 className="form-control"
-                                value={this.state.recipe_prep_time}
+                                defaultValue={this.state.recipe_prep_time}
                                 onChange={this.onChangeRecipePrepTime}
                                 />
                     </div>
@@ -116,7 +116,7 @@ export default class EditRecipe extends Component {
                         <label>Cook Time: </label>
                         <input  type="number"
                                 className="form-control"
-                                value={this.state.recipe_cook_time}
+                                defaultValue={this.state.recipe_cook_time}
                                 onChange={this.onChangeRecipeCookTime}
                                 />
                     </div>
@@ -124,7 +124,7 @@ export default class EditRecipe extends Component {
                         <label>Steps: </label>
                         <input  type="text"
                                 className="form-control"
-                                value={this.state.recipe_steps}
+                                defaultValue={this.state.recipe_steps}
                                 onChange={this.onChangeRecipeSteps}
                                 />
                     </div>
