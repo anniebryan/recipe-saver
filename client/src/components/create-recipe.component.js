@@ -70,7 +70,7 @@ export default class CreateRecipe extends Component {
             recipe_steps: this.state.recipe_steps
         }
 
-        axios.post('/recipes/add', newRecipe)
+        axios.post('/recipes/add/', newRecipe)
             .then(res => {
                 console.log(res.data);
             })

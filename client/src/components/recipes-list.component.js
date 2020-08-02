@@ -22,7 +22,7 @@ export default class RecipesList extends Component {
     }
 
     componentDidMount() {
-        axios.get('/recipes')
+        axios.get('/recipes/')
             .then(response => {
                 this.setState({todos: response.data});
             })
@@ -32,7 +32,7 @@ export default class RecipesList extends Component {
     }
 
     componentDidUpdate() {
-        axios.get('/recipes')
+        axios.get('/recipes/')
             .then(response => {
                 this.setState({todos: response.data});
             })

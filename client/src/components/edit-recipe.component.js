@@ -23,7 +23,7 @@ export default class EditRecipe extends Component {
     }
 
     componentDidMount() {
-        axios.get('/recipes'+this.props.match.params.id)
+        axios.get('/recipes/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     recipe_title: response.data.recipe_title,
@@ -77,7 +77,7 @@ export default class EditRecipe extends Component {
             recipe_cook_time: this.state.recipe_cook_time,
             recipe_steps: this.state.recipe_steps
         };
-        axios.post('/recipes/update'+this.props.match.params.id, obj)
+        axios.post('/recipes/update/'+this.props.match.params.id, obj)
             .then(res => console.log(res.data));
 
         this.props.history.push('/');
