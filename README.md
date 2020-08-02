@@ -1,6 +1,6 @@
 # Recipe Saver
 
-[Demo](https://recipe-saver-app.herokuapp.com/)
+[Demo](https://recipe-saver-app.herokuapp.com/) <br>
 [Trello Board](https://trello.com/b/AsuQCTQ4/recipe-saver)
 
 Features of this **CRUD** app:
