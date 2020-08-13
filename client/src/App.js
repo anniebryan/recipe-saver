@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import RecipesList from './components/recipes-list.component';
+import ViewRecipe from './components/view-recipe.component';
 import EditRecipe from './components/edit-recipe.component';
 import CreateRecipe from './components/create-recipe.component';
 
@@ -26,8 +27,9 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <div class="container">
+        <div className="container">
           <Route path="/" exact component={RecipesList} />
+          <Route path="/view/:id" component={ViewRecipe} />
           <Route path="/edit/:id" component={EditRecipe} />
           <Route path="/create" component={CreateRecipe} />
         </div>

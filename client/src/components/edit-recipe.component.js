@@ -80,7 +80,7 @@ export default class EditRecipe extends Component {
         axios.post('/recipes/update/'+this.props.match.params.id, obj)
             .then(res => console.log(res.data));
 
-        this.props.history.push('/');
+        this.props.history.push('/view/'+this.props.match.params.id);
     }
 
     render() {

@@ -4,9 +4,7 @@ import axios from 'axios';
 
 const Recipe = props => (
     <tr>
-        <td>
-            <Link to={"/edit/"+props.recipe._id}>{props.recipe.recipe_title}</Link>
-        </td>
+        <td><Link to={"/view/"+props.recipe._id}>{props.recipe.recipe_title}</Link></td>
         <td>{props.recipe.recipe_ingredients}</td>
         <td>{props.recipe.recipe_prep_time}</td>
         <td>{props.recipe.recipe_cook_time}</td>
@@ -18,13 +16,13 @@ export default class RecipesList extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {todos: []};
+        this.state = {recipes: []};
     }
 
     componentDidMount() {
         axios.get('/recipes/')
             .then(response => {
-                this.setState({todos: response.data});
+                this.setState({recipes: response.data});
             })
             .catch(function(error) {
                 console.log(error);
@@ -34,7 +32,7 @@ export default class RecipesList extends Component {
     componentDidUpdate() {
         axios.get('/recipes/')
             .then(response => {
-                this.setState({todos: response.data});
+                this.setState({recipes: response.data});
             })
             .catch(function(error) {
                 console.log(error);
@@ -42,7 +40,7 @@ export default class RecipesList extends Component {
     }
 
     recipeList() {
-        return this.state.todos.map(function(currentRecipe, i) {
+        return this.state.recipes.map(function(currentRecipe, i) {
             return <Recipe recipe={currentRecipe} key={i} />;
         });
     }
@@ -50,7 +48,7 @@ export default class RecipesList extends Component {
     render() {
         return (
             <div>
-                <h3>Recipes List</h3>
+                <h3>All Public Recipes</h3>
                 <table className="table table-striped" style={{ marginTop: 20 }}>
                     <thead>
                         <tr>
